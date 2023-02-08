@@ -670,4 +670,27 @@ def CreateMatrix(rows, collunms):
 def PrintMatrix(matrix):
     for vector in matrix:
         print(vector)
+    
+#Converter binário para decimal fácil
+print("Bom dia, simbora!")
+number = input("Enter a Binary number: ")
+dec_number = int(number, 2)
+print("The decimal conversion is: ", dec_number)
+
+#Converter binário para decimal difícil
+binario = input("Digite um número binário: ")
+tamanho = len(binario)
+soma = 0
+for i in binario:
+    tamanho = tamanho - 1
+    if i=='1':
+         aux = (int(i))*(2**tamanho)
+         soma = soma + aux
+    elif i=='0':
+        aux = 0
+        soma = soma + aux
+    else:
+        soma = "Número inválido."
+        break
+print(soma)
 """
